@@ -29,7 +29,7 @@ resource "aws_security_group" "web_sg" {
 
 resource "aws_instance" "web" {
   ami                    = "ami-0543dbdaf4e114be7"
-  instance_type          = "t3.micro"
+  instance_type          = "c7i-flex.large"
   vpc_security_group_ids = [aws_security_group.web_sg.id]
 
   user_data = <<-EOF
